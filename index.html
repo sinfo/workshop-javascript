@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SINFO - Website Builup Workshop</title>
+
+		<meta name="description" content="How to build a website in 90 mins">
+		<meta name="author" content="SINFO">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Workshop</h1>
+					<h3>JavaScript</h3>
+					<img src="https://3.bp.blogspot.com/-PTty3CfTGnA/TpZOEjTQ_WI/AAAAAAAAAeo/KeKt_D5X2xo/s1600/js.jpg" style="width: 100px;">
+					<p>
+						<small>Created by <a href="http://sinfo.org">SINFO</a>, source is on <a href="https://github.com/sinfo/workshop-js">Github</a>.</small>
+					</p>
+				</section>
+
+				<section>
+					<h1>Who are we?</h1>
+					<p>
+						We are SINFO...
+					</p>
+
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h1>JavaScript</h1>
+						<p>
+							JavaScript started as a programming language to make internet pages more interactive. Nowadays JavaScript runs in more places than just web browsers — it runs on web servers, phones and even robots! 
+						</p>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<h2>How is it used?</h2>
+							<p>Let&#39;s open Google chrome console!</p>
+							<p>To open the console, right click anywhere on the screen and hit Inspect Element, then click on the Console tab</p>
+							<img src="img/console.png">
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							```html5
+							(console)
+								> "Hello World!"
+
+							```
+							<br>
+							<br>
+
+							```html5
+							(console)
+								> "SINFO is awesome!"
+								> 'Now seriously folks, SINFO is really awesome'
+								> "SINFO!!!'
+							"```
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p><b>Strings:</b>  In JavaScript a bunch of letters, numbers, words or anything else is known as a String</li>
+							</p>
+							</br>
+							<p>
+								Strings have to begin AND end with a quotation mark. Single &#39; or double &quot; is fine, just make sure you use the same at the beginning as you do at the end.
+							</p>
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p><b>Values & Variables:</b>
+							</p>
+							</br>
+							<p >
+								Values are the simplest components in JavaScript. <b style="color:blue;">1</b> is a value, <b style="color:blue;">true</b> is a value, <b style="color:blue;">"hello"</b> is a value, <b style="color:blue;">function() {}</b>   is a value
+							</p>
+							</br>
+							<p>
+								To store values we use things called variables
+							</p>
+							```html5
+							(console)
+								> var sinfoWorkshop = "This workshop is awesome!"
+								> sinfoWorkshop
+							```
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p><b>Functions:</b> We call things that perform actions, functions
+							</p>
+							</br>
+							<p >
+								As an example, "replace" can replace words.
+							</p>
+
+							```html5
+							(console)
+								> var sinfoWorkshops = "SINFO workshops are awesome!"
+								> sinfoWorkshops.replace('are', 'participants are')
+								> sinfoWorkshops
+							```
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p><b>Making new Functions:</b> Let&#39;s make a function called iKnowJavascript that adds a bunch of exclamation points to the end of a string.
+							</p>
+
+							```html5
+							(console)
+								function iKnowJavascript(string) {
+									return string + '!!!!'
+								}
+							```
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p>Here is another function that doesn&#39;t return anything but instead uses a different method to show us the output:
+							</p>
+
+							```html5
+							(console)
+								function yellIt(string) {
+									  string = string.toUpperCase()
+									  string = iKnowJavascript(string)
+									  console.log(string)
+									}
+							```
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p><b>Loops:</b>Now we can start being lazy
+							</p>
+							```html5
+							(console)
+								function logANumber(someNumber) {
+								  console.log(someNumber)
+								}
+								_.times(10, logANumber)
+							```
+
+							<aside class="notes">
+								Copy pasta http://underscorejs.org/underscore.js no terminal para poder usar _.
+							</aside>
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p><b>Arrays:</b>Think of an Array like a sorted list that you can keep tons of stuff in.
+							</p>
+							```html5
+							(console)
+								>	var whatsHappeningToday = ["FCUL", "Workshop", "JavaScript"]
+								>	console.log(whatsHappeningToday[2])
+							```
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p>If you made something else interesting today and you want to add them to your list it is super simple:
+							</p>
+
+							```html5
+								(console)
+								>	whatsHappeningToday.push("Slept in class")
+							```
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p>To check that the new cat made it into your array you can use .length:
+							</p>
+
+							```html5
+								(console)
+								>	whatsHappeningToday.length
+							```
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							<p><b>Objects:</b>Arrays are good for lists, but for other tasks they can be hard to work with. What if you also wanted to store more than just names?
+							</p>
+
+							```html5
+								(console)
+								>	var todayI = { : did:"learn", what: "JavaScript", where: "FCUL" }
+								>	console.log("Today i " + todayI.did, todayI.what + " at " + todayI.where)
+							```
+						</script>
+					</section>
+
+					
+
+				</section>
+				<section>
+					<h1>THE END</h1>
+					<h3>By SINFO Dev Team</h3>
+					<small>Made using <a href="https://github.com/hakimel/reveal.js">reveal.js</small>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
